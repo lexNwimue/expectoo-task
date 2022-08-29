@@ -23,6 +23,9 @@ function App() {
     setData([]); // Set data to empty array on button click
     setFeedback("");
     let response = await getData();
+    if (response.failed) {
+      setFeedback(response.failed);
+    }
     if (response) {
       setData(response);
     } else {

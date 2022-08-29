@@ -1,6 +1,8 @@
 import express from "express";
 import upload from "express-fileupload";
 import sequelize from "./db/config.mjs";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 import { handleUploadedFile, displayData } from "./controller/handleUpload.js";
